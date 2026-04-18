@@ -9,7 +9,7 @@ export class RsvpService {
   create(dto: RsvpDto) {
     return this.prisma.rsvp.create({
       data: {
-        meetupId: (dto as any).meeting_id,
+        meetupId: dto.meeting_id,
         name: dto.name,
         email: dto.email,
       },
